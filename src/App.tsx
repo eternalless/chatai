@@ -13,7 +13,7 @@ const client = new ApolloClient({
 function App() {
   // 调用 generateText 查询（Query）
 const generateText = async (prompt: string, maxTokens: number) => {
-  const response = await client.query({
+  const response:any = await client.query({
     query: gql`
       query GenerateText($prompt: String!, $maxTokens: Float) {
         generateText(prompt: $prompt, maxTokens: $maxTokens)

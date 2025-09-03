@@ -1,4 +1,4 @@
-export interface Message {
+export type Message = {
     id: string;
     content: string;
     role: 'user' | 'assistant';
@@ -6,7 +6,7 @@ export interface Message {
     isLoading?: boolean;
   }
   
-  export interface ChatProps {
+  export type ChatProps = {
     onSendMessage?: (message: string) => Promise<string>;
     placeholder?: string;
     maxHeight?: string;
