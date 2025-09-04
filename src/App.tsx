@@ -27,7 +27,7 @@ const generateText = async (prompt: string) => {
   const mockApiCall = async (message: string): Promise<string> => {
     // 模拟网络延迟
     // await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
-    const res = await generateText(message, 100)
+    const res = await generateText(message)
     console.log(res);
     // 模拟不同类型的回复
 
