@@ -3,7 +3,7 @@ import './App.css'
 import ChatBox from './pages/ChatBox';
 // 必须显式创建 HttpLink
 const httpLink = new HttpLink({
-  uri: '/graphql', // 你的后端地址
+  uri: 'https://nodeai.luchen199999.workers.dev/graphql', // 你的后端地址
 });
 // 创建 Apollo 客户端
 const client = new ApolloClient({
@@ -15,7 +15,7 @@ function App() {
 const generateText = async (prompt: string) => {
   const response:any = await client.query({
     query: gql`
-      query GenerateText($prompt: String!,) {
+      query GenerateText($prompt: String!) {
         generateText(prompt: $prompt)
       }
     `,
